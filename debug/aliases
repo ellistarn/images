@@ -1,2 +1,2 @@
-alias kdebug='kubectl run -it --image ellistarn/debug $USER-$RANDOM'
+alias kdebug='kubectl run -it --image ellistarn/debug $USER-debug-$RANDOM'
 alias kdebugcleanup='kubectl get pods -n default --no-headers=true | cut -f1 -d " " | xargs kubectl delete pods'

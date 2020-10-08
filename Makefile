@@ -5,6 +5,6 @@ IMAGES ?= debug
 
 all:
 	for image in $(IMAGES); do \
-		docker build $$image -t ${REPOSITORY}/$$image; \
+		DOCKER_BUILDKIT=1 docker build --ssh default -t ${REPOSITORY}/$$image $$image; \
 		docker push ${REPOSITORY}/$$image; \
 	done
