@@ -13,3 +13,6 @@ kdebug
 # run a command
 kdebug echo foo
 kdebug ping 8.8.8.8
+
+# cleanup old debug pods
+kdebugcleanup
