@@ -11,9 +11,11 @@ source <(curl -s https://raw.githubusercontent.com/ellistarn/images/main/debug/a
 # open a shell
 kdebug
 
-# run a command
-kdebug echo foo
-kdebug ping 8.8.8.8
+# debug networking
+kdebug nslookup kubernetes.default.svc.cluster.local
+
+# debug rbac
+kdebug kubectl get pods
 
 # cleanup old debug pods
 kdebugcleanup
