@@ -24,3 +24,13 @@ RUN --mount=type=ssh sh -c \
 
 # Set default shell to Zsh
 RUN sed -i 's|root:x:0:0:root:/root:/bin/ash|root:x:0:0:root:/root:/bin/zsh|' /etc/passwd
+
+# Install AWS CLI
+RUN apk add --no-cache \
+        python3 \
+        py3-pip \
+    && pip3 install --upgrade pip \
+    && pip3 install \
+        awscli \
+    && rm -rf /var/cache/apk/*
+
