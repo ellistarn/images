@@ -7,6 +7,7 @@ RUN apk update
 RUN apk add --no-cache \
     openssh-client \
     git \
+    jq \
     zsh \
     curl \
     kubectl@testing \
